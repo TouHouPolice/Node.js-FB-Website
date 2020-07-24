@@ -1,0 +1,45 @@
+<!-- this is a structure of Bootstrap Modal-->
+<div class="modal fade" id="infoModal" tabindex="-1" role="diaglog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header  text-center">
+                <h3 class="modal-title text-light"  id="mealName">Modal title</h3>
+                <button type="button" class="close bg-light" data-dismiss="modal">
+                    <span>&times;</span>
+                </button> 
+            </div>
+            <div class="modal-body">
+                <div class="row" text-center>
+                    <div class="col-xs-5">
+                        <img style="width: 270px;height:210px;" class="img-fluid img-thumbnail" id="mealPicture">
+                    </div>
+                    <div class="col-xs-7">
+                        <table class="table table-hover table-responsive table-sm">
+                            
+                            <tr>
+                                <td><span class="badge badge-pill badge-dark text-muted font-weight-bold">Price</span></td>
+                                <td id="price" style='width:200px; word-break:break-all;word-wrap:break-word;'></td>
+                            </tr>
+                            
+                            
+                        </table>
+                        <tr class="col-xs-12 px-3"><span class="badge badge-pill badge-dark text-muted font-weight-bold float-left">Introduction</span>
+                            <p id="introduction"></p>
+                        </tr>
+                    </div>
+                </div>
+
+                
+                
+                
+                <div class="col-xs-12 px-3 text-center">
+                    <iframe src="" frameborder="0" allowfullscreen id="trailer1"></iframe>
+                    <iframe src="" frameborder="0" allowfullscreen id="trailer2"></iframe>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary " data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

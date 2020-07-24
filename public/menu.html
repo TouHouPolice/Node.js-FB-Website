@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Required meta tags-->
+    <title>Menu</title>
+    <meta charset="utf-8">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- Our own CSS. This has to be placed after all third party CSS libraries.-->
+    <link rel="stylesheet" href="css/mystyle.css">
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+    <script>src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"</script>
+    <script src="js/w3.js"></script>
+    
+    
+
+    
+
+</head>
+
+<body onload="userDetect();fetchComments();getMealData()"  style="background-color:rgba(236, 233, 221, 0.952);">
+    <div w3-include-html="nav-bar.html"></div>
+              <div class="d-block " style="position: relative">
+                <h1 style="color:rgb(255, 174, 0); left:300px;top:250px;font-size:60px;" class="overimg">Our Food</h1>
+              <img  style="margin-bottom:5px;" width="1800px" height="570px;"   src="images/food-wide.jpg">
+            </div>
+            
+              <div  class=" dropdown" style="margin-top:10px;;margin-left:150px; margin-bottom:20px;" >
+                    <button style="clear:none;"  class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                       Full Menu
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <a class="dropdown-item" item="All" onclick="getMealData();labelChange(this)" href="#">Full Menu</a>
+                      <a class="dropdown-item" item="Lunch" onclick="fetchMealByCategory(this);labelChange(this)" href="#">Lunch/Dinner</a>
+
+                      <a class="dropdown-item" item="Main" onclick="fetchMealByCategory(this);labelChange(this)" href="#">Main</a>
+                      <a class="dropdown-item" item="Side" onclick="fetchMealByCategory(this);labelChange(this)" href="#">Sides</a>
+                      <a class="dropdown-item" item="Dessert" onclick="fetchMealByCategory(this);labelChange(this)" href="#">Desserts</a>
+                      <a class="dropdown-item" item="Beverage" onclick="fetchMealByCategory(this);labelChange(this)" href="#">Beverage</a>
+                      <a class="dropdown-item" item="Bugger" onclick="fetchMealByCategory(this);labelChange(this)" href="#">Buggers</a>
+                    </div>
+
+                    
+                  </div>
+              </div>
+                 
+                  
+
+               <div class="food-box">
+
+                  <div class="row" id="parent">
+                      Retrieving food.... Please wait... <br><br> If you are seeing
+                      this message for a long long time, it is likely that you have a javscript error,
+                      Trouble-shoot your script by using the browser console panel now. Please use either Firefox or Chrome to render this webpage.
+                  </div>
+                  
+                  <p>
+                      <!--This is the heading showing how many movies there are-->
+                      <h3 id ="summary"></h3>
+                  </p>
+          
+                  <!-- This is the portion containing image of all movies under the specific category -->
+                  <div id="mealsTable" class="row"></div>
+
+
+                  <!--<div class="col-md-3" style="float: left; margin: 20 px;">                                                                                                                                                                                                   
+                      <div class="flip-container" >                                                                                                                                                                                       
+                          <div class="flipper">                                                                                                                                                                                           
+                              <div class="front">                                                                                                                                                                                         
+                                  <a id="meals"  href="#" data-toggle="modal" data-target="#infoModal" >                                                                                                
+                                      <img style="height: 90px;width:210px;" class="img-fluid img-thumbnail" src="/images/logo_mcd.png" />                                                                                                                                       
+                                  </a>                                                                                                                                                                                                    
+                              </div>                                                                                                                                                                                                      
+                              <div class="back">                                                                                                                                                                                          
+                                  <div class="bg-dark mystyle text-center py-3" >                                                                                                                                                         
+                                      <span>Meal Name</span><br>                                                                                                                                                                      
+                                      <button href="#" data-toggle="modal" data-target="#infoModal"  type="button" class="comments btn btn-primary btn-sm" >Information</button>       
+                                      <button href="#" data-toggle="modal" data-target="#commentModal"  type="button" class="comments btn btn-primary btn-sm" onClick="showMovieComments(this)" >Comments</button>    
+                                  </div>                                                                                                                                                                                                  
+                              </div>                                                                                                                                                                                                      
+                          </div>                                                                                                                                                                                                          
+                      </div>                                                                                                                                                                                                              
+                  </div>;-->
+
+                
+               </div> 
+               
+          <div w3-include-html="login-modal.html"></div> 
+          <div w3-include-html="register-modal.html"></div> 
+          <div w3-include-html="info-modal.html"></div> 
+          <div w3-include-html="comment-modal.html"></div>
+          <div w3-include-html="new-comment-modal.html"></div>
+          <div w3-include-html="thankyou.html"></div>
+          <div w3-include-html="message-modal.html"></div>
+          <div w3-include-html="edit-Comment-Modal.html"></div>
+
+          <div w3-include-html="edit-account-modal.html"></div>
+         <script src="js/comments.js"></script>
+
+         <script src="js/website.js"></script>
+         <script src="js/app.js"></script>
+         <script src="js/bootstrap-native-v4.js"></script>
+         <script src="js/menu.js"></script>
+         <script src="js/search.js"></script>
+         
+         
+    
+    
+    
+                <script>
+      //to bring in the other html on the fly into this main index.html
+              w3.includeHTML();
+            </script>
+
+             
+                
+               <div>
+                  <footer>COPYRIGHT© 2018 ALL RIGHTS RESERVED BY Temasek Polytechnic.</footer>
+                </div>
+                
+</body>
+</html>
+
+
+              

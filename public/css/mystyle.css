@@ -1,0 +1,827 @@
+.mystyle {
+    height: 80px;
+    width: 200px;
+    color: white;
+    font-size: smaller;
+    margin-top:45px;
+}
+
+.edit{
+    float: right;
+    padding-right: 10px;
+}
+/* entire container, keeps perspective */
+
+.flip-container {
+    perspective: 1000px;
+    margin-bottom: 100px;
+    
+}
+
+
+/* flip the pane when hovered */
+
+.flip-container:hover .flipper,
+.flip-container.hover .flipper {
+    transform: rotateY(180deg);
+}
+
+.flip-container,
+.front,
+.back {
+    height: 90px;
+    width: 200px;
+}
+
+
+/* flip speed goes here */
+
+.flipper {
+    transition: 1s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+
+/* hide back of pane during swap */
+
+.front,
+.back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+/* front pane, placed above back */
+
+.front {
+    z-index: 2;
+    /* for firefox 31 */
+    transform: rotateY(0deg);
+}
+
+
+/* back, initially hidden pane */
+
+.back {
+    transform: rotateY(180deg);
+}
+
+footer {
+    
+    clear:both;
+    text-align: center;
+    background: #aaa;
+    color: white;
+    font-size: 15px;
+    margin-top:100px;
+    bottom:0;
+}
+.bg-dark{
+    background-color: rgba(0, 0, 0, 0.836)
+}
+.nav-item{
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+
+
+/* unvisited link */
+a:link {
+    color: rgb(247, 247, 247);
+}
+
+/* visited link */
+a:visited {
+    color: rgb(255, 255, 255);
+}
+
+/* mouse over link */
+a:hover {
+    color: rgb(235, 250, 23);
+}
+
+/* selected link */
+a:active {
+    color: rgb(42, 42, 196);
+}
+
+.centered{
+    position: absolute;
+    right:auto;
+    left: auto;
+}
+.space-left{
+    position: relative;
+    left:100px;
+    margin-bottom: 20px;
+    
+    
+}
+.space-right{
+    position: relative;
+    
+    right:100px;
+
+}
+.intro-block{
+    
+    
+    text-align: center;
+    
+    
+   
+    margin-left:auto;
+    margin-right:auto;
+    
+    
+    
+
+    display: block;
+
+}
+
+
+
+
+.cborder{
+    border-style:solid;
+    padding: 0;
+    border-color: crimson;
+    border-radius: 0.5em;
+} 
+
+.bg1{
+background-color: rgb(255, 157, 0)
+}
+.text-container{
+    font-size: 15px;
+    font-style: italic;
+    min-height: 250px;
+    position: relative;
+    float:left;
+    width: 500px;
+    margin-left:auto;
+    border-style:solid;
+    padding:0.1em;
+    border-color:rgb(255, 255, 255);
+    border-radius: 0.5px;
+    word-wrap: break-word;
+    text-align:left;
+}
+.text-container1{
+    font-size: 15px;
+    font-style: italic;
+    min-height: 250px;
+    position: relative;
+    float:right;
+    width: 500px;
+    margin-left:auto;
+    border-style:solid;
+    padding:0.1em;
+    border-color:rgb(255, 255, 255);
+    border-radius: 0.5px;
+    word-wrap: break-word;
+    text-align:left;
+}
+.intro{
+    height:250px;
+    display:block;
+    clear:left;
+    position: relative;
+    
+    margin-bottom: 50px;
+    
+    margin-left:350px;
+
+}
+.intro1{
+    height:250px;
+    display:block;
+    clear:left;
+    position: relative;
+    
+    margin-bottom: 50px;
+    
+    margin-right:350px;
+}
+.image-container{
+    position: relative;
+    margin-right:5px;
+    float:left;
+    width: 400px;
+    height:250px;
+    border-style:solid;
+    
+    border-color:rgb(236, 194, 9);
+    border-radius: 1px;
+    word-wrap: break-word;
+    
+
+
+}
+.image-container1{
+    position: relative;
+    
+    float:right;
+    width: 400px;
+    height:250px;
+    border-style:solid;
+    padding:0.1em;
+    border-color:rgb(236, 194, 9);
+    border-radius: 0.2em;
+    word-wrap: break-word;
+    
+
+
+}
+.twobtn{
+    width:300px;
+    
+    height: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    
+    
+}
+
+.menu-dropdown{
+    position:relative;
+    left:150px;
+    right:auto;
+}
+
+.menu-button{
+    float:right;
+    position: relative;
+    right:200px;
+    font-size:20px;
+    background-color: rgb(236, 115, 15);
+}
+
+.menu-button:hover {
+    
+    
+    color: rgb(253, 253, 253);
+}
+.food-box{
+    position: relative;
+    margin-left:150px;
+    border-top:solid;
+    border-color:rgb(61, 63, 53);
+    display:block;
+    margin-right:150px;
+    height: auto;
+}
+
+#my-map{
+    width:700px;
+    height:600px;
+    float:left;
+    margin-right:30px;
+    margin-bottom: 30px;
+    border: 2px solid orange;
+    
+    
+    
+    position: relative;
+}
+.pop{
+    width:50px;
+    height:50px;
+}
+.editpop{
+    width:50px;
+    height:50px;
+
+}
+.nutriresult{
+   position: relative;
+    display: block;
+    right:150px;
+    margin-top: 50px;
+    float:right;
+    width:500px;
+    clear:none;
+    
+    text-align:center;
+}
+.allergresult{
+    margin-right:130px;
+    display: block;
+    margin-top: 50px;
+    float:right;
+    width:500px;
+    clear: none;
+    text-align:center;
+}
+.addmeal{
+    margin-top:2em;
+
+}
+.orangefact{
+    width: 400px;
+    background-color: orange;
+    text-align: center;
+    float: right;
+    height:100px;
+    clear: right;
+
+}
+.factbox{
+    clear:right;
+    float:right;
+    width:400px;
+    text-align: center;
+
+}
+.facttable{
+    margin-left:10px; 
+    width:380px;
+    padding:10px;
+
+}
+.fact-energy{
+    height: 24px;
+    position:relative;
+    margin-bottom: 10px;
+    
+}
+.fact-label{
+    float: left;
+    clear: left;
+    margin-left:20px;
+
+}
+.fact-value{
+    float:right;
+    clear:right;
+    margin-right:20px;
+
+}
+.fact-protein{
+    height: 24px;
+    position:relative;
+    margin-top:10px;
+}
+.fact-total-fat{
+    height: 24px;
+    position:relative;
+    margin-top:10px;
+}
+.fact-saturated-fat{
+    height: 24px;
+    position:relative;
+    margin-top:10px;
+}
+.fact-cholesterol{
+    height: 24px;
+    position:relative;
+    margin-top:10px;
+}
+.fact-carbohydrates{
+    height: 24px;
+    position:relative;
+    margin-top:10px;
+}
+.fact-dietary-fibres{
+    height: 24px;
+    position:relative;
+    margin-top:10px;
+}
+.fact-sodium{
+    height: 24px;
+    position:relative;
+    margin-top:10px;
+}
+.fact-tree-nuts{
+    height: 24px;
+    position:relative;
+    margin-top:10px;
+}
+.nutritext{
+    font-size: 14px;
+    color:grey;
+    padding: 20px;
+    text-align: left;
+}
+
+.foodselector{
+    
+    margin-left:100px;
+    margin-right: 50px;
+    display: block;
+    margin-top: 3em;
+    float:left;
+    width:600px;
+    
+
+
+}
+.allergens-text{
+    claer:left;
+}
+.checkbox{
+    margin-top:6px;
+    float:left;
+    margin-left: 20px;
+    height:20px;
+    width: 20px;
+    padding:1px;
+   
+    background-color: white;
+    border: 1px solid rgb(44, 44, 44);
+    
+    position: relative;
+}
+.checkbox-label{
+    float:left;
+    text-align: left;
+    margin-left:25px;
+    font-size: 20px;
+    position: relative;
+
+}
+
+.fact-egg{
+    height: 40px;
+    position:relative;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.fact-fish{
+    height: 40px;
+    position:relative;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.fact-milk{
+    height: 40px;
+    position:relative;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.fact-peanuts{
+    height: 40px;
+    position:relative;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.fact-soy-beans{
+    height: 40px;
+    position:relative;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+
+.fact-tree-nuts{
+    height: 40px;
+    position:relative;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+
+.fact-wheat{
+    height: 40px;
+    position:relative;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+
+.fact-gluten{
+    height: 40px;
+    position:relative;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+
+.fact-MSG{
+    height: 40px;
+    position:relative;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+
+.fact-sulfite{
+    height: 40px;
+    position:relative;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.Map-right{
+    
+    float:left;
+    
+    width: 400px;
+    
+    text-align:left;
+}
+
+.mapntext{
+    margin-left:300px;
+    width: auto;
+    height:auto;
+    margin-top:50px;
+}
+
+p.info{
+    font-size: 20px;
+}
+.Map-bottom{
+    
+    clear:left;
+
+}
+.login{
+    position: absolute;
+    top:20px;
+    right:10px;
+    color: white;
+    text-align: center;
+}
+.user{
+    position: absolute;
+    top:2px;
+    right:10px;
+    color: white;
+    height: 65px;
+    
+    width: 450px;
+    color: black;
+    
+
+    
+}
+.update{
+    float:right;
+    margin-top: 12px;
+    margin-right:20px;
+
+}
+.avatarBox{
+    position: relative;
+    float: left;
+    margin-top:7px; 
+    width: 50px;
+    height: 50px;
+}
+.nameId{
+    margin-left:15px;
+    float: left;
+
+    clear:right;
+    
+
+}
+user
+
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+
+}
+
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+img.select-avatar {
+    width: 200px;
+    height: 200px;
+    border-style: solid;
+    border-radius: 1px;
+    border-color: rgb(255, 255, 255);
+    margin-left:10px;
+    margin-right:30px;
+    
+}
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+    .cancelbtn {
+        width: 100%;
+    }
+}
+
+.btnlogin{
+    
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+    
+}
+
+.browseHeading{
+    font-size:35px;
+    float:both;
+    text-align: center;
+    margin-top:5px;
+    margin-bottom: 5px;
+    margin-right:auto;
+    margin-left:auto;
+}
+.mealsTableBox{
+    width: 750px;
+    
+    margin-left: auto;
+    margin-right:auto;
+}
+.mealsPic{
+    width:240px; 
+    height:170px;
+    float:left;
+    margin-left:10px;
+    margin-bottom: 10px;
+    margin-top:10px;
+
+}
+
+
+#myInput {
+     /* Add a search icon to input */
+    background-position: 10px 12px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 600px; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
+}
+
+#myUL {
+    /* Remove default list styling */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width:600px;
+}
+
+#myUL li a {
+    border: 1px solid #ddd; /* Add a border to all links */
+    margin-top: -1px; /* Prevent double borders */
+    background-color: #f6f6f6; /* Grey background color */
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove default text underline */
+    font-size: 18px; /* Increase the font-size */
+    color: black; /* Add a black text color */
+    display: block; /* Make it into a block element to fill the whole list */
+}
+
+#myUL li a:hover:not(.header) {
+    background-color: #eee; /* Add a hover effect to all links, except for headers */
+}
+
+
+#addedBox{
+    position: relative;
+    float:left;
+    clear:left;
+    height: 400px;
+    width: 550px;
+    
+    margin-top:100px;
+}
+.addedItem{
+    position: relative;
+    float:left;
+    margin:10px;
+    
+    width: 235px;
+    height: 185px;
+
+}
+.removeicon{
+    position: absolute;
+    right:0;
+    top:0;
+    width:15px;
+    height: 15px;
+
+}
+
+.bigHeading{
+    text-align: center;
+    font-size:50px;
+    margin-top:30px;
+}
+.priceBox1{
+    
+    position: absolute;
+    left:170px;    
+    clear:none;
+    width:100px;
+    height:60px;
+}
+.priceBox2{
+    position: absolute;
+    right:170px; 
+        
+    clear:none;
+    width:100px;
+    height:60px;
+}
+
+
+.inputArea{
+    font-size:25px;
+    position:relative;
+    text-align: center;
+    margin-left: auto;
+    margin-right:auto;
+    width:600px;
+    margin-top:20px;
+    height:200px;
+}
+
+.inputLine{
+    height:80px;
+    text-align: center;
+}
+
+
+
+.globalName{
+    float:left;
+    clear: both;
+    color: white;
+    margin-top: 5px;
+}
+.globalId{
+    color: rgba(255, 255, 255, 0.575);
+    margin-top: 5px;
+    float:left;
+    clear: both;
+}
+.signOut{
+    float: right;
+    margin-top:12px;
+}
+
+.searchBox{
+    clear: none;
+    width: 600px;
+    
+    position: absolute;
+    
+    
+}
+.overimg{
+    position: absolute;
+    font-style: italic;
+    left:250px;
+    top:230px;
+}

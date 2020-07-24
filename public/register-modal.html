@@ -1,0 +1,35 @@
+<div class="modal fade" id="registerModal" tabindex="-1" role="diaglog">
+    <div class="modal-dialog modal-lg" role="document">
+<form class="modal-content animate" >
+<div class="imgcontainer">
+  <div style="clear:both;font-size:20px;text-align:center;margin-bottom:10px;">Select your avatar</div>
+  <img onclick="selectAvatar(this)" src="images/avatar/no-image.jpg" alt="Avatar" class="select-avatar">
+  <img onclick="selectAvatar(this)" src="images/avatar/goggles.png" alt="Avatar" class="select-avatar">
+  <img onclick="selectAvatar(this)" src="images/avatar/patrics.jpg" alt="Avatar" class="select-avatar">
+</div>
+
+<div class="container">
+    <label><b>ID</b></label>
+    <input id="ID" type="text" placeholder="Enter ID" name="uname" required>
+  <label><b>Username</b></label>
+  <input id="username" type="text" placeholder="Enter Username" name="uname" required>
+
+  <label><b>Password</b></label>
+  <input id="password1" type="password" placeholder="Enter Password" name="psw" required>
+
+  <label><b>Confirm Password</b></label>
+  <input id="password2" type="password" placeholder="Enter Password" name="psw" required>
+
+  <button class="btnlogin" onclick="register()" >Submit</button>
+ <!-- <label>
+    <input type="checkbox" checked="checked"> Remember me
+  </label>-->
+</div>
+
+<div class="container" style="background-color:#f1f1f1">
+  <button type="button" data-dismiss="modal"  class="cancelbtn">Cancel</button>
+  
+</div>
+</form>
+</div>
+</div>
